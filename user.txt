@@ -1,0 +1,21 @@
+#!/bin/bash
+read -p " please enter the valid UserName:" USER_NAME
+echo $USER_NAME
+if [ -z "$USER_NAME" ]; then
+ echo "Its not a valid user $USER_NAME"
+else
+ echo "THE username is $USER_NAME"
+EX_USER = $(cat/etc/passwd | cut -d":" -f1 | grep -w $USER_NAME
+if ["$USER_NAME " = " $EX_USER"] then
+ echo "User $USER_NAME exits. please select a diffent username.."
+else
+ echo "Lets create user $USER_NAME'
+spec= $ (echo'!@#$%^&*()' | fold-w1 |shuf|head-1)
+Password = "India @ ${RANDOM} $ {spec}"
+echo $PASSWORD
+useradd -m $USER_NAME
+echo "$USER_NAME: $PASSWORD" | sudo chpasswd
+passwd -e "${USER_NAME}"
+fi
+fi
+
